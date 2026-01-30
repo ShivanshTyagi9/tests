@@ -27,6 +27,7 @@ def build_description(row):
             return ""
         return str(val)
 
+    category = safe(row.get("category"))
     MMSI = safe(row.get("MMSI"))
     vessel_name = safe(row.get("vessel_name"))
     vessel_class = "" 
@@ -47,8 +48,8 @@ def build_description(row):
     lwchs_str = "_".join(parts)
 
     return (
-        f"ship_category_{MMSI}_{vessel_name}_{vessel_class}_"
-        f"{lwchs_str}_source"
+        f"ship_{category}_{MMSI}_{vessel_name}_{vessel_class}_L-{length}_W-{width}_H-{heading}_C-{cog}_S-{sog}_source"
+        #f"{lwchs_str}_source"
     )
 
 
