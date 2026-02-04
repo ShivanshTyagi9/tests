@@ -1,0 +1,2 @@
+path_id,rmse,ade,fde,f1,speed_rmse,heading_error,dtw
+100000001,13.9406,2.1552,0.0,0.9825,0.0,0.0,186.9034
